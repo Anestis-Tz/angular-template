@@ -1,0 +1,54 @@
+{
+    "LANG": "en",
+    "APP": {
+      "TITLE": "My Application",
+      "DESCRIPTION": "Welcome to My Application"
+    },
+    "NAV": {
+      "HOME": "Home",
+      "ABOUT": "About",
+      "CONTACT": "Contact",
+      "LOGIN": "Login",
+      "LOGOUT": "Logout"
+    },
+    "BUTTONS": {
+      "SAVE": "Save",
+      "CANCEL": "Cancel",
+      "DELETE": "Delete",
+      "EDIT": "Edit",
+      "SUBMIT": "Submit",
+      "RESET": "Reset",
+      "SEARCH": "Search"
+    },
+    "FORM": {
+      "FIRST_NAME": "First Name",
+      "LAST_NAME": "Last Name",
+      "EMAIL": "Email",
+      "PASSWORD": "Password",
+      "CONFIRM_PASSWORD": "Confirm Password",
+      "SUBMIT_SUCCESS": "Form submitted successfully!",
+      "SUBMIT_ERROR": "There was an error submitting the form."
+    },
+    "VALIDATIONS": {
+      "REQUIRED": "This field is required.",
+      "EMAIL_INVALID": "Please enter a valid email address.",
+      "PASSWORD_MISMATCH": "Passwords do not match.",
+      "MIN_LENGTH": "Minimum length is {{minLength}} characters."
+    },
+    "MESSAGES": {
+      "WELCOME": "Welcome, {{username}}!",
+      "GOODBYE": "Goodbye, see you soon!",
+      "LOADING": "Loading...",
+      "NO_DATA": "No data available."
+    },
+    "ERRORS": {
+      "NOT_FOUND": "Page not found",
+      "SERVER_ERROR": "Server error",
+      "FORBIDDEN": "You do not have permission to access this resource.",
+      "UNAUTHORIZED": "Unauthorized access"
+    },
+    "FOOTER": {
+      "COPYRIGHT": "© 2024 My Application. All rights reserved."
+    }
+  }
+  
