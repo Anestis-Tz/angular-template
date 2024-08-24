@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -16,6 +17,7 @@ export const appConfig: ApplicationConfig = {
     BrowserModule,
     CommonModule,
     HttpClientModule,
+    provideAnimationsAsync(),
     provideHttpClient(withFetch()),
     importProvidersFrom(HttpClientModule),
     importProvidersFrom(
@@ -26,7 +28,7 @@ export const appConfig: ApplicationConfig = {
           deps: [HttpClient],
         },
       })
-    ),
+    ), provideAnimationsAsync(),
   ],
 };
 
