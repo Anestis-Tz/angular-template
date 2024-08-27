@@ -4,6 +4,10 @@
   "compilerOptions": {
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
+    "strictNullChecks": false,  // Allow undefined and null for any type
+    "noImplicitAny": false,     // Allow implicit `any` type
+    "noImplicitThis": false,    // Allow `this` with implicit `any`
+    "strictPropertyInitialization": false,
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,

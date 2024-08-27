@@ -1,0 +1,38 @@
+<!-- Header -->
+<h1 class="py-3">
+    <i class="d-block" [ngClass]="dialogConfig?.icon"></i>
+    <img class="dialog-avatar" [src]="dialogConfig?.avatar" *ngIf="dialogConfig?.avatar" />
+    {{dialogConfig?.title | translate}}
+</h1>
+<button type="button" class="close-button" (click)="close()">&times;</button>
+
+<!-- Message -->
+<p>{{dialogConfig?.message | translate}}</p>
+
+<!-- Extra Message -->
+<p>{{dialogConfig?.extraMessage | translate}}</p>
+
+<!-- Toggle -->
+<mat-slide-toggle class="mb-3" [color]="'primary'" *ngIf="data?.args?.toggle" (change)="switchToggle($event)"
+    [checked]="data?.args?.toggle?.value">
+    {{data?.args?.toggle.label | translate}}
+</mat-slide-toggle>
+
+<!-- Dynamic form group -->
+<div *ngIf="formGroup" [formGroup]="formGroup">
+    <mat-form-field class="form-element" appearance="fill" *ngFor="let formField of formFields">
+        <mat-label>{{formField?.label | translate}}</mat-label>
+        <input [type]="formField?.type" matInput [formControlName]="formField?.id"
+            [placeholder]="formField?.placeholder || '' | translate">
+        <mat-icon matSuffix
+            (click)="formField.type == 'password' ? formField.type = 'text' :  formField.type = 'password'"
+            *ngIf="formField.showPwd">
+            {{formField.type == 'password' ? 'visibility' : 'visibility_off'}}
+        </mat-icon>
+
+        <mat-error *ngFor="let errors of formField?.errors">
+            <span *ngIf="formGroup.controls[formField?.id].errors?.[errors?.id]">{{errors?.label | translate}}
+            </span>
+        </mat-error>
+    </mat-form-field>
+</div>
